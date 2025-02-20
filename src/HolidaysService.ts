@@ -35,7 +35,7 @@ export interface Datetime {
 }
 
 
-export function getHolydays(opts: Options): Promise<Holyday[]> {
+export function getHolidays(opts: Options): Promise<Holyday[]> {
     const url = 'https://calendarific.com/api/v2/holidays'
 
     return axios.get(url, {

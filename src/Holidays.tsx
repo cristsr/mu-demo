@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getHolydays, Holyday} from "./HolidaysService.ts";
+import {getHolidays, Holyday} from "./HolidaysService.ts";
 import {NavLink} from "react-router";
 
 function Holidays({country}: { country: string }) {
@@ -7,7 +7,7 @@ function Holidays({country}: { country: string }) {
     const [nextHoliday, setNextHoliday] = useState<number>(0)
 
     useEffect(() => {
-        getHolydays({
+        getHolidays({
             country: country,
             year: new Date().getFullYear(),
         }).then(setHolidays)
